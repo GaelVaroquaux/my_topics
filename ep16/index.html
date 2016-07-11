@@ -41,6 +41,7 @@
 
 	.space-above {
 	    margin-top: 50px;
+	    display: inline-table;
 	}
 
 	a.btn-header {
@@ -53,6 +54,11 @@
 	    float: right;
 	}
 
+	.feature-cell {
+	    display: inline-table;
+	    float: none;
+	}
+
 	@media (max-width: 992px) {
 	    .logo {
 		display: none;
@@ -60,10 +66,6 @@
 	}
 
 	@media (min-width: 992px) {
-	    .vert-stretched {
-		min-height: 600px;
-	    }
-
 	    a.btn-header {
 		margin-top: 30px;
 		margin-right: 5%;
@@ -119,7 +121,7 @@
 
         <div class="row space-above">
 
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_00.png" alt="">
                     <div class="caption">
@@ -237,7 +239,7 @@ Finally, as a bonus track and to complete the used practical example, class desc
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_01.png" alt="">
                     <div class="caption">
@@ -399,7 +401,7 @@ Project sponsored by Symfonia NCN grant: UMO-2013/08/W/NZ4/00691
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_02.png" alt="">
                     <div class="caption">
@@ -530,7 +532,7 @@ La charla no tiene pretensión de ser ni una introducción al test driven develo
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_03.png" alt="">
                     <div class="caption">
@@ -657,7 +659,7 @@ Production engineers working on those services will be attending Europython 16 a
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_04.png" alt="">
                     <div class="caption">
@@ -870,7 +872,7 @@ When useful, I compare the solutions with the approach we would take in language
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_05.png" alt="">
                     <div class="caption">
@@ -1001,7 +1003,7 @@ how it could be done for Python
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_06.png" alt="">
                     <div class="caption">
@@ -1124,7 +1126,7 @@ One of the biggest differences, in the Python community, in relation to other co
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_07.png" alt="">
                     <div class="caption">
@@ -1247,7 +1249,7 @@ By the end of the talk, you should have an idea of which are the most typical ca
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_08.png" alt="">
                     <div class="caption">
@@ -1352,7 +1354,7 @@ Making a robot walk is not easy, especially when all it has for brains is a smal
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 feature vert-stretched">
+            <div class="col-md-4 col-sm-6 feature feature-cell">
                 <div class="thumbnail">
                     <img src="topic_09.png" alt="">
                     <div class="caption">
@@ -1436,7 +1438,8 @@ https://en.wikipedia.org/wiki/Game_theory
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6" style="text-align: right">
+            <div class="col-md-4 col-sm-6"
+		 style="text-align: right; float: right; margin-right: 30px;">
 		<div style="padding-top: 1.5em;">
 		    <p>
 		    <small>Brought to you by &nbsp; &nbsp;</small>
