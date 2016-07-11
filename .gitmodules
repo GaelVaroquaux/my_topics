@@ -1,0 +1,3 @@
+[submodule "github-pages-publish"]
+	path = github-pages-publish
+	url = git@github.com:rafaelmartins/github-pages-publish.git
