@@ -67,7 +67,7 @@
 	    z-index: 98;
 	    width: 410px;
 	    margin-left: -40px;
-	    margin-top: 1.5em;
+	    margin-top: 1.6em;
 	    /*bottom: 100%;*/
 	    display: inline-block;
 	}
@@ -86,7 +86,7 @@
     <div class="container-fluid">
 
 	<header class="jumbotron">
-	    <img src="europython_logo.png" class="logo">
+	    <a href="https://ep2016.europython.eu/"><img src="europython_logo.png" class="logo"></a>
 
 	    <h1>Topics in EuroPython's talks</h1>
 	    <p>Too many abstracts to browse? </p>
@@ -95,8 +95,10 @@
 	    extracted with <i>data-science</i>
 	    <i class="fa fa-magic" aria-hidden="true"></i>.
 	    </p>
-	    <!--<p><a class="btn btn-primary btn-large">Call to action!</a>
-	    </p> -->
+	    <p><a href="https://github.com/GaelVaroquaux/my_topics"
+		class="btn btn-default btn-large" style="float: right;">Code
+	    <i class="fa fa-github" aria-hidden="true"></i></a>
+	    </p>
 
 	    <div class="clearfix"></div>
 	</header>
@@ -125,22 +127,26 @@
             </div>
 	    {{endfor}}
 
+            <div class="col-md-4 col-sm-6" style="text-align: right">
+		<div style="padding-top: 1.5em;">
+		    <p>
+		    <small>Brought to you by &nbsp; &nbsp;</small>
+		    </p>
+		    <a href="http://gael-varoquaux.info/">
+			<img src="gael_simple.png"/>
+		    </a>
+		</div>
+		<!-- Footer -->
+		<footer>
+		    <p>&copy;
+		    <a href="http://gael-varoquaux.info/">Gaël Varoquaux</a>
+		    2016</p>
+		    <p>License CC BY 2.0</p>
+		</footer>
+	    </div>
+
 	</div>
         <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy;
-		    <a href="http://gael-varoquaux.info/">Gaël Varoquaux</a>
-		    2016 &mdash;
-		    License CC BY 2.0</p>
-                </div>
-            </div>
-        </footer>
 
     </div>
     <!-- /.container -->
