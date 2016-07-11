@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Topics in EuroPython's talks</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <style>
+	body {
+	    padding-top: 70px; 
+	}
+
+	footer {
+	    margin: 50px 0;
+	}
+
+	p.small {
+	    font-size: 19px;
+	}
+
+	.feature {
+	    margin-bottom: 30px;
+	}
+
+	.space-above {
+	    margin-top: 50px;
+	}
+
+	.logo {
+	    width: 20%;
+	    max-width: 300px;
+	    float: right;
+	}
+
+	@media (max-width: 992px) {
+	    .logo {
+		display: none;
+	    }
+	}
+
+	@media (min-width: 992px) {
+	    .vert-stretched {
+		min-height: 590px;
+	    }
+	}
+
+	*[tooltip]:hover:after {
+	    background: rgba(0,0,0,.8);
+	    border-radius: 5px;
+	    color: white;
+	    content: attr(tooltip);
+	    padding: 5px 15px;
+	    left: 30%;
+	    position: absolute;
+	    z-index: 98;
+	    width: 410px;
+	    margin-left: -40px;
+	    margin-top: 1.5em;
+	    /*bottom: 100%;*/
+	    display: inline-block;
+	}
+
+	a[tooltip] {
+	    display: block;
+	}
+
+   </style>
+
+   </head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+	<header class="jumbotron">
+	    <img src="europython_logo.png" class="logo">
+
+	    <h1>Topics in EuroPython's talks</h1>
+	    <p>Too many abstracts to browse? </p>
+	    <p class="small">
+	    Here is a list of topics and related talks, automatically
+	    extracted with <i>data-science</i>
+	    <i class="fa fa-magic" aria-hidden="true"></i>.
+	    </p>
+	    <!--<p><a class="btn btn-primary btn-large">Call to action!</a>
+	    </p> -->
+
+	    <div class="clearfix"></div>
+	</header>
+
+        <div class="row space-above">
+
+	    {{for loop, topic in looper(topics)}}
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_0{{loop.index}}.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">{{topic.first_word}}
+			    &nbsp; <small>{{topic.second_word}}</small></h3>
+			<ul style="padding-left: 18px;">
+			    {{for talk in topic.talks}}
+				<li><a href="{{talk.url}}"
+				{{if talk.description}}
+				    tooltip="{{talk.description}}"
+				{{endif}}
+				>
+				    {{talk.title}}</a></li>
+			    {{endfor}}
+			</ul>
+                    </div>
+                </div>
+            </div>
+	    {{endfor}}
+
+	</div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy;
+		    <a href="http://gael-varoquaux.info/">Gaël Varoquaux</a>
+		    2016 &mdash;
+		    License CC BY 2.0</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
