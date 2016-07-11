@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Topics in EuroPython's talks</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Font awesome CSS -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <style>
+	body {
+	    padding-top: 70px; 
+	}
+
+	footer {
+	    margin: 50px 0;
+	}
+
+	p.small {
+	    font-size: 19px;
+	}
+
+	.feature {
+	    margin-bottom: 30px;
+	}
+
+	p.right-header {
+	    text-align: right;
+	    margin-right: 40px;
+	}
+
+	.space-above {
+	    margin-top: 50px;
+	}
+
+	a.btn-header {
+	    float: right;
+	}
+
+	.logo {
+	    width: 20%;
+	    max-width: 300px;
+	    float: right;
+	}
+
+	@media (max-width: 992px) {
+	    .logo {
+		display: none;
+	    }
+	}
+
+	@media (min-width: 992px) {
+	    .vert-stretched {
+		min-height: 600px;
+	    }
+
+	    a.btn-header {
+		margin-top: 30px;
+		margin-right: 5%;
+	    }
+	}
+
+	*[tooltip]:hover:after {
+	    background: rgba(0,0,0,.8);
+	    border-radius: 5px;
+	    color: white;
+	    content: attr(tooltip);
+	    padding: 5px 15px;
+	    left: 30%;
+	    position: absolute;
+	    z-index: 98;
+	    width: 410px;
+	    margin-left: -40px;
+	    margin-top: 1.6em;
+	    /*bottom: 100%;*/
+	    display: inline-block;
+	}
+
+	a[tooltip] {
+	    display: block;
+	}
+
+   </style>
+
+   </head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+	<header class="jumbotron">
+	    <a href="https://ep2016.europython.eu/"><img src="europython_logo.png" class="logo"></a>
+
+	    <h1>Topics in EuroPython's talks</h1>
+	    <p>Too many abstracts to browse? </p>
+	    <p class="small">
+	    Here is a list of topics and related talks, automatically
+	    extracted with <i>data-science</i>
+	    <i class="fa fa-magic" aria-hidden="true"></i>.
+	    <a href="https://github.com/GaelVaroquaux/my_topics"
+		class="btn btn-default btn-large btn-header">Code
+	    <i class="fa fa-github" aria-hidden="true"></i></a>
+	    </p>
+
+	    <div class="clearfix"></div>
+	</header>
+
+        <div class="row space-above">
+
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_00.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">python
+			    &nbsp; <small>programming</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/sponsored-talk-hired"
+				>
+				    Sponsored talk: Hired</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/peeking-into-pythons-c-api"
+				    tooltip="
+We all love Python. It’s so elegant and easy to use as a programming language that we forget about the giant, complicated C program executing our strings of white-space sensitive code. For many Python programmers, this side of Python is just a big black box. It works well, so thankfully we don’t need to go messing around inside… but what if you want to look into the inner workings of this powerful tool? One way to dive into the C-program-side of Python is by exploring the C API for writing Python bindings to native C libraries. In this talk I will explore the basics of this API as I recount my journey to make a simple C library callable from Python code, and allow C code to invoke objects defined in pure Python. Along the way, we will encounter some essential features of Python: reference counting, memory management, and the inner-workings of objects and modules. 
+"
+				>
+				    Peeking into Python’s C API</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/using-and-abusing-pythons-double-underscore-methods-and-attributes"
+				    tooltip="
+The curious Python methods and attributes surrounded by double underscores (’__’) go by many names, including “special”, “dunder”, and “magic”. You probably use some of them, like __init__, every day. But that’s just the tip of the iceberg! 
+In this talk, we’ll explore the weird and wonderful world of the double-underscore, and find out how dunders can be useful, silly, dangerous, and just fun! We’ll play pranks on Python’s builtin operators for arithmetic and comparison. We’ll make arbitrary objects behave like dictionaries and containers. We’ll reduce an object’s memory usage, and speed up tests for membership. We’ll even try some naughty function hacks that we should never use in real life!
+You’ll get the most out of this talk if you’re already comfortable writing object-oriented Python code. If you already use special dunder magic in your own code, that’s excellent! You’ll have a chance to share your tips &amp; tricks with the rest of the audience at the end of the talk.
+"
+				>
+				    Using and abusing Python’s double-underscore methods and attributes</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/go-for-python-programmers"
+				    tooltip="
+A side-by-side walkthrough of basic Go syntax and semantics compared to Python.
+"
+				>
+				    Go for Python Programmers</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/fat-python-a-new-static-optimizer-for-python-36"
+				    tooltip="
+(Almost) everything in Python is mutable which makes Python a language very difficult to optimize. Most optimizations rely on assumptions, for example that builtin functions are not replaced. Optimizing Python requires a trigger to disable optimization when an assumption is no more true. FAT Python exactly does that with guards checked at runtime. For example, an optimization relying on the builtin len() function is disabled when the function is replaced.
+Guards allows to implement various optimizations. Examples: loop unrolling (duplicate the loop body), constant folding (propagates constants), copy builtins to constants, remove unused local variables, etc.
+FAT Python implements guards and an optimizer rewriting the Abstract Syntax Tree (AST). The optimizer is implemented in Python so it’s easy to enhance it and implement new optimizations.
+FAT Python uses a static optimizer, it is less powerful than a JIT compiler like PyPy with tracing, but it was written to be integrated into CPython.
+I wrote 3 PEP (509, 510, 511) targeting Python 3.6. Some changes to support FAT Python have already been merged into Python 3.6.
+We will also see other pending patches to optimize CPython core, and the bytecode project which allows to modify bytecode, it also includes a peephole optimizer written in pure Python.
+Links:
+
+http://faster-cpython.readthedocs.org/fat_python.html
+http://fatoptimizer.readthedocs.org/
+http://bytecode.readthedocs.org/
+
+"
+				>
+				    FAT Python: a new static optimizer for Python 3.6</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/learn-python-the-fun-way"
+				    tooltip="
+Programming is one of the most important 21st-century skills. It doesn’t only provide promising career opportunities but teaches how to reason logically, systematically and creatively. 
+Code readability, rich standard library, straightforward syntax and other features make Python a great language for teaching beginners how to program. Python community is very supportive and friendly to newcomers and does awesome work to make Python available to everyone. Tons of different online and offline resources can help you to master Python programming. Problem solving is the classical way of learning how to code. But it can be boring for some people, especially for kids.
+On the other hand, playing games is really effective way for us to learn and it’s also the most fun. You can find different games designed to teach basics of programming, but most of them use special visual environments and don’t teach real text based languages. 
+But is it possible to learn programming language like Python by playing a game? 
+In this talk I’ll show you a few projects for different age and levels that allow you to achieve that. I’ll pay attention on methods that are used to teach programming.
+I also want to inspire you to help such projects and to suggest ideas how to do that.
+"
+				>
+				    Learn Python The Fun Way</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/exploring-python-bytecode"
+				    tooltip="
+Do you ever wonder what your simple, beautiful Python code looks like to the interpreter? Are you starting to get curious about those .pyc files that always pop up in your project, and you always ignore? Would you like to start investigating your Python code’s performance, and learn why some programs you write run faster than others, even if the code looks more or less the same? Have you simply fallen so completely in love with Python that you’re ready to peer deep inside its soul?
+If you, like me, answered “yes” to any of these questions, join me in an illuminating adventure into the world of Python bytecode! Bytecode is the “intermediate language” that expresses your Python source code as machine instructions the interpreter (specifically CPython, the “standard” interpreter) can understand. Together we’ll investigate what that means, and what role bytecode plays in the execution of a Python program. We’ll discover how we simple humans can read this machine language using the dis module, and inspect the bytecode for some simple programs. We’ll learn the meaning of a few instructions that often appear in our bytecode, and we’ll find out how to learn the rest. Finally, we’ll use bytecode to understand why a piece of Python code runs faster if we put it inside of a function.
+When you go home, you’ll be able to use bytecode to get a deeper understanding of your Python code and its performance. The adventure simply starts here; where it ends is up to you!
+"
+				>
+				    Exploring Python Bytecode</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/iteration-iteration-iteration"
+				    tooltip="
+There should be something for everyone in this whistle–stop tour of iteration in Python setting off from for–loops, and riding cross–country to multiplexing coroutines!
+See and hear the amazing sights and sounds of list comprehensions, and generators. Take in the amazing vistas from itertools, and be amazed at the magnificent yield!
+We’ll take detours to higher–order functions, closures, and decorators. And cover the FP inspired builtins map, filter, and reduce, as well as the epitome of Pythonic programming, enumerate.
+"
+				>
+				    Iteration, iteration, iteration</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/exploring-our-python-interpreter"
+				    tooltip="
+During my last CPython sprint, I started to contribute to the CPython code and I
+wanted to understand the beast.
+In this case, there is only one solution, trace the code from the beginning.
+From the command line to the interpreter, we will take part to an adventure
+
+Overview of the structure of the project and the directories.
+From the Py_Main function to the interpreter.
+The used technics for the Lexer, Parser and the generation of the AST and of
+course of the Bytecodes.
+We will see some bytecodes with the dis module.
+How does VM works, it’s a stack machine.
+The interpreter and its main loop of the Virtual Machine.
+
+The idea behind is just to show how CPython works for a new contributor to
+CPython.
+From the command line, we will learn that Python is a library and that we can
+embed it in a C project. In fact we will see the Py_Main function to the ceval.c
+file of the interpreter.
+But there is no magic in the CPython code, we will travel in the lexer and the
+parser of CPython, and why not, by the AST for one Python expression.
+After the AST, we will visit the Compiler and the Bytecodes for the
+interpreter.
+Of course, we will learn there is the peepholer where some basic instructions
+are optimised by the this component.
+And of course, the interpreter, this virtual machine is really interesting for
+the newbiew, because it’s a big stack where the bytecodes are executed one by
+one on the stack and the ceval.c file.
+"
+				>
+				    Exploring our Python Interpreter</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/its-not-magic-descriptors-exposed"
+				    tooltip="
+This talk presents, using a detailed practical example, the Python Descriptos.
+The behaviour of descriptors mechanisms is detailed, showing their power and flexibility.
+Finally, as a bonus track and to complete the used practical example, class descriptors are explained.
+"
+				>
+				    It's not magic: descriptors exposed</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_01.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">learning
+			    &nbsp; <small>science</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/high-performance-python-on-intel-architecture"
+				    tooltip="
+This talk will give an overview about the Intel® Distribution for Python which delivers high performance acceleration of Python code on Intel processors for scientific computing, data analytics, and machine learning. 
+In the first part of the talk, we’ll look at the architecture of the latest Intel processors, including the brand new Intel Xeon Phi, also known as Knights Landing, a many-core processor, which was just released end of June 2016. 
+In the second part, we will see which tools and libraries are available from Intel Software to enable high performance Python code on multi-core and many-core processors.
+"
+				>
+				    High Performance Python on Intel Many-Core Architecture </a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/an-introduction-to-deep-learning"
+				    tooltip="
+                Sub Community: PyData
+                In the last few years, deep neural networks have been used to generate state of the art results in image classification, segmentation and object detection. They have also successfully been used for speech recognition and textual analysis. In this talk, I will give an introduction to deep neural networks. I will cover how they work, how they are trained, and a little bit on how to get going. I will briefly discuss some of the recent exciting and amusing applications of deep learning. The talk will primarily focus on image processing.
+"
+				>
+				    An Introduction to Deep Learning</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/deep-learning-with-python-tensorflow"
+				    tooltip="
+                Sub Community: PyData
+                Python has lots of scientific, data analysis, and machine learning libraries. But there are many problems when starting out on a machine learning project. Which library do you use? How do they compare to each other? How can you use a model that has been trained in your production application?
+TensorFlow is a new Open-Source framework created at Google for building Deep Learning applications. Tensorflow allows you to construct easy to understand data flow graphs in Python which form a mathematical and logical pipeline. Creating data flow graphs allow easier visualization of complicated algorithms as well as running the training operations over multiple hardware GPUs in parallel.
+In this talk I will discuss how you can use TensorFlow to create Deep Learning applications. I will discuss how it compares to other Python machine learning libraries like Theano or Chainer. Finally, I will discuss how trained TensorFlow models could be deployed into a production system using TensorFlow Serve.
+"
+				>
+				    Deep Learning with Python &amp; TensorFlow</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/introduction-to-deep-learning-for-natural-language-processing"
+				    tooltip="
+                Sub Community: PyData
+                Ever wondered how Google Translate works so well? Do you know how the auto-captioning works on Youtube? How to mine the sentiments of tweets on twitter? And there’s a host of successful natural language processing examples out there. What’s the underlying theme? They all use Deep Learning.
+This workshop introduces artificial neural networks and deep learning. The building blocks of neural networks are discussed in detail. Attendees are introduced to learning using ANN with backpropagation algorithm.
+A preliminary model using multi-layer perceptron is implemented to get a feel for deep learning model structure and the library keras.
+The state-of-art recurrent neural networks is introduced. Two approaches are shown - 0ne using Long Short-Term Memory models and another one leveraging Word2Vec. Some ways to overcome overfitting are explored. 
+We’ll also show how GPU’s affect the computation.
+We’ll also implement a RNN to do text-generation.
+Ideal Background of the attendee
+Some knowledge of machine learning. 
+ - Bias and Variance
+ - Train, Validation, and Test sets
+ - Cross-validation
+ - hyperparameter optimization
+ - Measuring model accuracy 
+ - Supervised and Unsupervised learning
+ - Overfitting 
+ - Basic Python constructs
+The repository for the tutorial is here
+The repository has instructions on what packages to install and the data we would be using for the workshop.
+"
+				>
+				    Introduction to Deep Learning for Natural Language Processing</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/machine-learning-power-of-ensembles"
+				    tooltip="
+                Sub Community: PyData
+                It is relatively easy to build a first-cut machine learning model. But what does it take to build a reasonably good model, or even a state-of-art model ?
+Ensemble models. They are our best friends. They help us exploit the power of computing. Ensemble methods aren’t new. They form the basis for some extremely powerful machine learning algorithms like random forests and gradient boosting machines. The key point about ensemble is that consensus from diverse models are more reliable than a single source. This talk will cover how we can combine model outputs from various base models(logistic regression, support vector machines, decision trees, neural networks, etc) to create a stronger/better model output.
+This talk will cover various strategies to create ensemble models.
+Using third-party Python libraries along with scikit-learn, this talk will demonstrate the following ensemble methodologies:
+1) Bagging
+2) Boosting
+3) Stacking
+Real-life examples from the enterprise world will be show-cased where ensemble models produced better results consistently when compared against single best-performing models.
+There will also be emphasis on the following: Feature engineering, model selection, importance of bias-variance and generalization.
+Creating better models is the critical component of building a good data science product. 
+A preliminary version of the slides is available here
+"
+				>
+				    Machine Learning: Power of Ensembles</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/a-gentle-introduction-to-neural-networks-with-python"
+				    tooltip="
+                Sub Community: PyData
+                A gentle introduction to neural networks, and making your own with Python.
+This session is deliberately designed to be accessible to everyone, including anyone with no expertise in mathematics, computer science or Python.
+From this session you will have an intuitive understanding of what neural networks are and how they work. If you are more technically capable, you will see how you could make your own with Python and numpy.
+Part 1 - Ideas:
+ - the search for AI, hard problems for computers easy fro humans
+ - learning from examples (simple classifier)
+ - biologically inspired neurons and networks
+ - training a neural network - the back propagation breakthrough
+ - matrix ways of working (good for computers)
+Part 2 - Python:
+ - Python is easy, and everywhere
+ - Python notebooks
+ - the MNIST data set
+ - a very simple neural network class
+ - focus on concise and efficient matrix calculations with bumpy
+ - 97.5% accuracy recognising handwritten numbers - with just a few lines of code!
+Part 3 - Q&amp;A
+"
+				>
+				    A Gentle Introduction to Neural Networks (with Python)</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/how-can-machine-learning-help-to-predict-changes-in-size-of-atlantic-herring"
+				    tooltip="
+                Sub Community: PyData
+                A decline in size and weight of Atlantic herring  in the Celtic Sea has been observed since the mid-1980’s.  The cause of the decline remains largely unexplained but is likely to be driven by the interactive effect of various endogenous and exogenous factors. The goal of this study is to interrogate a long time-series of biological data obtained from commercial fisheries from 1959 to 2012.  We use gradient boosting regression trees to identify important variables underlying changes in growth from various potential drivers, such as: 
+- Atlantic multidecadal oscillation;
+- sea surface temperature;
+- salinity;
+- wind;
+- zooplankton abundance;
+- fishing pressure.
+This learning algorithm allows to quantify the influence of the potential drivers of change with the test error lower when compared to other supervised learning techniques. The predictor variables importance spectrum (feature importance) helps to identify the underlying patterns and potential tipping points while resolving the external mechanisms underlying observed changes in size and weight of herring.  This analysis is a useful case-study of how Python can be implemented in academia.  The outputs of the analysis are of relevance to conservation efforts and sustainable fisheries management which promotes species resistance and resilience.
+"
+				>
+				    How can machine learning help to predict changes in size of Atlantic herring ?</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/i-hate-you-nlp"
+				    tooltip="
+                Sub Community: PyData
+                Overview
+This talk aims to introduce the audience to the wide array of tools available in Python focused on sentiment analysis. It will cover basic semantic mapping, emoticon mapping as well as some of the more recent developments in applying neural networks, machine learning and deep learning to natural language processing. Participants will also learn some of the pitfalls of the different approaches and see some hands-on code for sentiment analysis.
+Outline
+
+NLP: then and now
+Why Emotions Are Hard
+Simple Analysis
+
+TextBlob (&amp; other available libraries)
+Bag of Words
+Naive Bayes
+
+Complex Analysis
+
+Preprocessing with word2vec
+Metamind &amp; RNLN
+Optimus &amp; CNN
+TensorFlow
+Watson
+
+Live Demo
+Q&amp;A
+
+"
+				>
+				    I Hate You, NLP... ;)</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/machine-learning-for-dummies-with-python"
+				    tooltip="
+Have you heard that Machine Learning is the next big thing?
+Are you a dummy in terms of Machine Learning, and think that is a topic for mathematicians with black-magic skills?
+If your response to both questions is ‘Yes’, we are in the same position.
+Still, thanks to the Web, Python and OpenSource libraries, we can overcome this situation and do some interesting stuff with Machine Learning.
+"
+				>
+				    Machine Learning for dummies with Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/pymice-library"
+				    tooltip="
+Life sciences are suffering badly from a “research reproducibility crisis”. One of possible countermeasures is automation of data acquisition and analysis. 
+Automated data acquisition systems facilitate standardization of conditions and measurements by minimization of human disturbance. One of such systems is IntelliCage™, dedicated for long-term behavioural experiments on cohorts of mice in social context.
+The robustness of data analysis may be improved with automated data analysis workflows (ADAWs): computer programs analysing the data in batch mode. Also, the source code of such program is an unequivocal, formal specification of the performed analysis. The only drawback of such approach is a significant effort and technical knowledge necessary to define an ADAW.
+Our goal was to simplify development of ADAWs and to shift the developer’s focus from technical details (like data format) to the analysis itself. To meet the goal, we developed the PyMICE library (resource identifier: RRID:nlx_158570). The library provides an user-friendly and intuitive API to access IntelliCage data, encouraging development of ADAWs according to object-oriented and functional programming paradigms.
+Acknowledgements
+Project sponsored by Symfonia NCN grant: UMO-2013/08/W/NZ4/00691
+"
+				>
+				    PyMICE - a library for analysis of IntelliCage™ data</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_02.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">test
+			    &nbsp; <small>testing</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/test-driven-code-search-and-the-art-of-writing-implementation-agnostic-tests"
+				    tooltip="
+This is the hands-on counterpart of the regular talk “Test-driven code search and reuse coming to Python with pytest-nodev”, it is suggested to attend it first.
+We will practice writing implementation-agnostic tests and using the test-driven reuse (TDR) development strategy, a natural extension of test-driven development (TDD), with pytest-nodev an Open Source test-driven search engine for Python code.
+TDR aims to address the limits of usual keyword-based search by focusing on code behaviour and semantics instead. Developing a new feature in TDR starts with the developer writing the tests that will validate candidate implementations of the desired functionality. Before writing any functional code the tests are run against all functions and classes of all available projects. Any code passing the tests is presented to the developer as a candidate implementation for the feature.
+Applications will include:
+
+test-driven code search of auxiliary functions and classes
+
+full code reuse by adding dependencies
+full code reuse by forking code samples
+partial code reuse by integrating features and identifying problem corner cases
+
+test-suite validation, identification of weak tests
+using implementation-agnostic tests to make regular test-suites more resilient to code refactoring.
+
+"
+				>
+				    Test-driven code search and the art of writing implementation-agnostic tests</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/test-driven-source-code-search-for-python-with-pytest-nodev"
+				    tooltip="
+We will present the test-driven reuse (TDR) development strategy, a natural extension of test-driven development (TDD), and how to execute it with pytest-nodev an Open Source test-driven search engine for Python code.
+When developing new functionalities developers spend significant efforts searching for code to reuse, mainly via keyword-based searches, e.g. on StackOverflow and Google. Keyword-based search is effective in finding code that is explicitly designed and documented to be reused, e.g. libraries and frameworks, but typically fails to identify reusable functions and classes in the large corpus of auxiliary code of software projects.
+TDR aims to address the limits of keyword-based search with test-driven code search that focuses instead on code behaviour and semantics. Developing a new feature in TDR starts with the developer writing the tests that will validate candidate implementations of the desired functionality. Before writing any functional code the tests are run against all functions and classes of available projects. Any code passing the tests is presented to the developer as a candidate implementation for the target feature.
+Pytest-nodev and other nodev tools that help implement TDR for Python are newer than the JAVA counterparts, in spite of that we will present several applications of the technique to more and more complex examples.
+"
+				>
+				    Test-driven code search and reuse coming to Python with pytest-nodev</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/pytest-simple-rapid-and-fun-testing-with-python-1"
+				    tooltip="
+The py.test tool presents a rapid and simple way to write tests for your Python code. This training gives a quick introduction with exercises into some distinguishing features. We’ll do exercises where we get existing non-pytest test suites to run with pytest and discuss migration strategies. We’ll finish with discussing topics and questions of participants related to their own test suites and usages.
+This is the planned outline:
+
+(30 minutes) pytest feature walkthrough: automatic test discovery, assert statement, modular parametrizable fixtures, 150 plugins
+(60 minutes) pytest fixture mechanism: dependency injection, declaring and using function/module/session scoped fixtures, using fixtures from fixture functions, parametrizing fixtures. Exercises.
+(30 minutes): running nose/unittest/trial/Django suites with pytest. Discussing advantages and limitations. Exercise with a select existing real-life open source project.
+(30 minutes): Strategies for a) migrating to pytest b) using “autouse” fixtures in conjunction with XUnit-based setup/tearodwn methods. Exercise.
+(30 minutes): open space for questions and interactively solving pytest/unittest integration problems on real-life problems as time permits.
+
+"
+				>
+				    pytest - simple, rapid and fun testing with Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/effectively-test-your-webapp-with-python-and-selenium"
+				    tooltip="
+How often do you run your Selenium test suite? How fast do you get a result from it?
+Would you like to answer with: “Whenever I feel like it” and “Well, about the time it takes me to finish a coffee” ? This talk will try to get you closer to these answers.
+We will have a look at the lessons learned and the challenges my team faced  maintaining a Selenium test suite against a long-lived Django web application.
+We will go over the pros and cons of:
+  - test design approaches
+  - technologies we used (nose, py.test, LiveServerTestCase)
+  - reporting tools 
+"
+				>
+				    Effectively test your webapp with Python and Selenium</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/property-based-testing-with-hypothesis"
+				    tooltip="
+Hypothesis is a library for writing smarter tests.
+Instead of hand-writing every example in your tests, you describe what sorts of examples you need and let it fill in the blanks. It uses this to actively go looking for bugs in your code.
+It’s proven very effective, and is being used by an ever growing number of open source projects (including pypy, cryptography, and mercurial), but people sometimes struggle to get started.
+In this session we’ll help you overcome that by going through a number of illustrative examples that will help you understand this style of testing better.
+The first two hours will be spent on these, start with a discussion of the problem, a sample test to start you off, and then people will work through it at their own pace, with me there to answer questions and help people when they get stuck. After people have had some time on a given problem, I’ll go over some possible tests for the example and why they are useful, and give people time to try anything they like out before moving on to the next problem.
+For the final hour, people will work on testing some more substantial code. You should feel free to bring your own, but I will provide some interesting projects for people to work on for anyone who doesn’t have anything specific.
+At the end of this you should feel much more comfortable with the general concepts of property based testing, and be able to use Hypothesis effectively to test your own code.
+"
+				>
+				    Property-based testing with Hypothesis</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/system-testing-with-pytest-and-docker-py"
+				    tooltip="
+System testing a microservice architecture is challenging. As we move away from monolithic architectures, system testing becomes more important but also more complicated.
+In the video game industry, if a game doesn’t work properly immediately after launch, it will heavily impact game success. We have found system testing to be an important tool for pre launch testing of game services and operational tools, to guarantee quality of these services at launch.
+We want to share with you best practices for system testing: when to write system tests, what to test and what not to, and common pitfalls to avoid. Using python’s pytest tool and docker-py for setting up services and their dependencies has made it easier than ever to write complex but maintainable system tests and we’ll share with you how we’ve made use of them.
+Developers (senior and junior) and ops folks can walk away from this talk with practical tips they can use to apply system testing to their software.
+"
+				>
+				    System Testing with pytest and docker-py</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/tdd-of-python-microservices"
+				    tooltip="
+These will be my ideas on how to help a microservice-based (HTTP) project by integrating testing into the development process (TDD).
+I’ll approach the testing pyramid presented in Martin Fowler’s “Microservice Testing” as well as the test variants in “Building Microservices” (O’Reilly) and I’ll show a way of how they can be translated to real-life Python.
+The main focus will be on “service tests” (aka. out-of-process component tests) and contract tests. They both can be run relatively fast on a development machine and can give fast feedback to the developer, preventing many kinds of problems.
+Service tests run the whole application process without any internal modifications, but have to present the service with a fake “outside world”. I’ll show how to fake external HTTP services with Mountebank (similar to WireMock). Instead of faking other systems (like databases) we can quickly spin up the real deal as a Docker container from within the tests.
+Contract tests check if the contract (interface) of your service with the outside world is kept, so no external services should be broken by the changes you are introducing. It can also work the other way around, proving that your collaborators are keeping their part of the deal. In both cases, Swagger (a RESTful API description scheme) and a few clever tricks can be used for significant advantage.
+"
+				>
+				    TDD of Python microservices</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/managing-mocks"
+				    tooltip="
+Mocking is a valuable technique for writing tests but mocking effectively is often a stumbling block for many developers and can raise questions about its overall value as a technique.
+The audience will have some familiarity with unit testing and may have tried mocking before, but some introduction will be provided for those who haven’t. We will look at some features and techniques of Python’s unittest.mock library and cover some useful tips and common scenarios, so this will be useful to those who have some experience mocking but would like to do so more effectively.
+Summary of proposed content:
+
+A short introduction to what mocking is and why it is useful.
+Tour of Python’s mock library and how to make the most of it
+
+Creating and manipulating Mock objects
+Setting up return values and side effects to control test environment
+Inspecting mocks - different ways to examine a mock object and find out what happened during the test
+How and where to patch
+
+Common mocking situations - scenarios where mocking is particularly useful and/or tricky to get right. For example - date/time, filesystem, read only properties
+Some discussion of when mocking is and isn’t helpful.
+
+Focus will be mainly on Python’s unittest.mock module but we will also have a brief look at some other useful libraries.
+"
+				>
+				    Managing Mocks</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/writing-unit-tests-for-c-code-in-python"
+				    tooltip="
+There are many unit testing frameworks for C out there, but most of them require you to write your tests in C (or C++). While there might be good reasons to keep your implementation in C (for example execution speed or resource consumption), those hardly apply to the tests. So wouldn’t it be nice to use all the power of Python and its unit testing capabilities also for your C code?
+This talk will show you how to combine CFFI and pycparser to easily create Python unit tests for C code, without a single line of C anywhere in the test cases. It will also cover creating mock functions in Python, that can be used by the C code under test to hide external dependencies. Finally, we will look at some of the challenges you might face when trying to mix Python and C and what to do about them.
+"
+				>
+				    Writing unit tests for C code in Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/pytest-desde-las-trincheras"
+				    tooltip="
+Las metodologías de desarrollo que incorporan la escritura de pruebas desde el momento cero tienden a generar código más estable y fiable pero la realidad es que muchas veces no gozamos del privilegio ni del presupuesto para escribir tests para todas las características de nuestro producto. Pero si tenemos a nuestra disposición herramientas de testing que nos permitan eliminar los errores evitables como romper enlaces en la página de inicio nos quitaremos el miedo a hacer pases a producción y generaremos más valor al negocio.
+La charla no tiene pretensión de ser ni una introducción al test driven development ni de las complejidades de qué es un buen o mal test. El objetivo es animar a todo aquel que todavía pruebe sus proyectos manualmente a intentar algún grado de automatización. Para ello la estructura será una presentación de pytest, exponer algunos plugins altamente recomendados y centrarse en el caso de uso de una página con presencia en ocho países donde automatizamos un montón de comprovaciones simples que nos permitieron reducir los errores evitables.
+"
+				>
+				    Pytest desde las trincheras</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_03.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">docker
+			    &nbsp; <small>infrastructure</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/service-discovery-for-dynamic-python-applications"
+				    tooltip="
+This talk will showcase and compare three Service Discovery technologies and their usage to build a dynamic and distributed python application :
+
+consul
+etcd
+zookeeper
+
+After a short introduction to service discovery, we will iterate and compare how we can address the concrete and somewhat complex design of our python application using each technology.
+We’ll then be able to discuss their strengths, weaknesses and python bindings and  finally showcase the application in a demo.
+All the source code will of course be made available for the audience to benefit and start from for their own use !
+"
+				>
+				    Using Service Discovery to build dynamic python applications</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/infrastructure-as-code-pip-install-your-environment"
+				    tooltip="
+Continuous Delivery, DevOps, Lean - all those movements have one thing in common: extending the process of software development along the whole value stream, ultimately to the customer. This simple requirement causes surprising serious difficulties on traditional operations workflows. All of a sudden, a single manual ticket to the operations team is a critical blocker in the delivery process. Therefore all parts of the infrastructure, storage, databases, identities, compute resources must be provided as a self service for the developers in order to be able to achieve this goal. What one may call “the cloud” (including self hosted ones like open stack) is such a successful model not least because they offer exactly this “ticket-less” self-service. But why should we wait for “the cloud” to offer what we really need? We are python developers, we are hackers!
+In this talk I will show how to build your own infrastructure-as-a-service on the example of “Postgraas”, an open source postgres-as-a-service I wrote in python just for fun. With a simple curl request you can get your very own database, just like RDS on AWS. You will learn how easy it is to create such a remarkably useful service with hardly three hundred lines of flask, docker and some glue-code, a project for a rainy Sunday. After the talk you will know how to amaze your colleagues by eliminating an annoying ticket or manual workflow with a simple flask app and some creativity.
+"
+				>
+				    Infrastructure as Code: &quot;pip install&quot; your environment</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/deploying-django-at-scale-what-happens-inside-the-cloud"
+				    tooltip="
+Aldryn is used daily to execute hundreds of Django based website-deployments. It consists of a control panel to help backend developers, frontend developers, project managers and content-editors collaborate to successfully build and maintain web apps, coupled to a scalable and highly available Docker-based build and deployment infrastructure currently used to host more than 6000 django-cms based websites.
+While the control panel is oriented mainly towards the Django/django-CMS match, the structure of the single projects and the deployment infrastructure allow to continuously deploy, upgrade and scale any type of HTTP service.
+The goal of this talk is to share some insights into the various components that intervene to deploy a Django project from its git repository to the cloud.
+This talk will discuss some of the problems we faced, and the solutions we adopted, to deploy Django projects at scale to the cloud. I’ll share the lessons we learned and present the tools we built to reach our goal. I’ll be covering topics like:
+ - Using a PyPI proxy to both build platform-specific wheels, on order to both to withstand PyPI downtimes and cut on deployment times;
+ - Dynamic traffic re-routing for zero-downtime deployments and horizontal scaling;
+ - Massive TLS termination on a custom built Twisted/PyPy reverse proxy;
+ - Live server and datacenter migrations for both apps and their data.
+"
+				>
+				    Deploying Django at scale: what happens inside the cloud</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/high-availability-scaling-with-share-nothing-architecture"
+				    tooltip="
+Scaling a project to a worldwide scale with the same performance and availability in every region using Python isn’t easy, but with the right mindset and tools it’s a very viable target. We will discuss methods of delivering software, with automated scaling systems, building units out of your project to manage separately and how to reliably and securely distribute data to separate clusters, and how we have achieved this with the use of Celery, Redis, Databases, Protobuf and other modern tools, whilst making sure to highlight our pitfalls and successes
+"
+				>
+				    High Availability Scaling with Share Nothing Architecture</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/real-virtual-environments-without-virtualenv"
+				    tooltip="
+The process of developing using Python is very straightforward and easy. Still, each and every developer has his own style of developing and building his entire dev environment. Most of us use virtualenvs which are reliable and comfortable to use. But there are some issues. For instance, the repeatability and immutability of the built environment are not guaranteed. 
+Virtualenv does a lot of work that targets the direction of somehow isolated and independent environments. They are almost fully repeatable. In any team, we can hear the notorious expression “It works for me!”.
+For some time now, I am using Docker instead of virtualenv for building custom and really-virtual environments that are entirely isolated. The containers are immutable and consistent, so this workflow guarantees repeatability.  Using such technique, not only enables the user to have unique and immutable environments, it also allows de developer to create full app architecture that can then be tested and deployed as is. So the production version will be in identical conditions as the one from the development environment. These features are not provided by virtualenv at all.
+The goal of this exercise is to try to use totally different tooling for building the application from its first line of code until the production. 
+"
+				>
+				    Real virtual environments without virtualenv</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/analyzing-data-with-python-docker"
+				    tooltip="
+                Sub Community: PyData
+                Docker is a powerful tool for packaging software and services in containers and running them on a virtual infrastructure. Python is a very powerful language for data analysis. What happens if we combine the two? We get a very versatile and robust system for analyzing data at small and large scale!
+I will show how we can make use of Python and Docker to build repeatable, robust data analysis workflows that can be used in many different contexts. I will explain the core ideas behind Docker and show how they can be useful in data analysis. I will then discuss an open-source Python library (Rouster) which uses the Python Docker-API to analyze data in containers and show several interesting use cases (possibly even a live-demo).
+Outline:
+
+Why data analysis can be frustrating: Managing software, dependencies, data versions, workflows
+How Docker can help us to make data analysis easier &amp; more reproducible
+Introducing Rouster: Building data analysis workflows with Python and Docker
+Examples of data analysis workflows: Business Intelligence, Scientific Data Analysis, Interactive Exploration of Data
+Future Directions &amp; Outlook
+
+"
+				>
+				    Analyzing Data with Python &amp; Docker</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/automate-contribute-repeat"
+				    tooltip="
+Computers are never as convenient as when they work for us. If you agree with this motto, then Ansible, a deployment and automation tool written in Python, might come in handy.
+At Ableton, Ansible is involved in every aspect of deployment and automation. From local machine setup, to vm creation and deployment in our self-hosted datacenter, to our services in the immensity of the cloud.
+Because it is dead simple to use, can deal with any number of hosts in parallel and has robust compatibility with Unix as well as Windows systems, you will probably never have to write a shell script again.
+Because it is written in Python and exposes a clean, extensible and easy to adapt design and architecture; contributing features to the project and fixing the bugs you might encounter during the journey is extremely easy. 
+At Ableton we love music and we love open-source. Ansible is an amazing tool which allows us to free more time for music by automating boring and repetitive tasks, and to contribute back to the open-source community with ease. Here’s an opportunity to share our love for it, our experience with it, and our contributions to it with you. 
+Automate, contribute, repeat. 
+"
+				>
+				    Automate, contribute, repeat.</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/hyperconvergence-meets-bigdata"
+				    tooltip="
+This presentation aims to demonstrate how to use SlapOS (Hyperconverged OS) to deploy an entire Big Data Infrastrucure and show how “data life cycle” can be managed with Wendelin - covering ingestion, analysis, visualization and weaving it into an application.
+We’ll show how Wendelin and SlapOS could handle acquisition, analysis and exploitation of data, making it a potential solution for IOT scenarios where data is available and needs some logic applied before being presented as web application, possibly on a commercial basis.
+The agenda of the presentation includes an introduction on SlapOS, as a tool used to deploy a wide range of different services and an introduction of Wendelin, as a tool in order to make out-of-core python applications.
+After a short introduction, we progress to show the steps to deploy SlapOS infrastructure and later to deploy Wendelin on the just deployed SlapOS, including an use case which shows SlapOS deploying a fluentd instance to ingest data to the Wendelin Database.
+To conclude, we make a live demo with an Jupiter using out-of-core python to handle wav files stored on Wendelin, and a second short demo on handle computer resources consumption data.
+"
+				>
+				    Hyperconvergence meets BigData </a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/so-whats-all-the-fuss-about-docker"
+				    tooltip="
+Ou cloud platform, Aldryn, is probably the world’s biggest host of Docker-powered Django websites. 
+We work with Docker every day, and also with less-technical users of the platform, so we have built up a good understanding of how to introduce and explain the technology for practical purposes, and of the numerous and multiple difficulties that users of it can stumble across.
+We want to share that experience, and help people take advantage of Docker from a Python/Django perspective.
+What does Docker offer you, the Django developer? Even if you already know a bit about Docker, you’re probably more familiar with it as a deployment tool, but in fact it offers some powerful advantages for the Python/Django developer too.
+This is a hands-on workshop that also aims to clarify some key questions for the Django developer:
+
+Why is Docker such a big deal?
+What problems can Docker solve for me?
+How does it work?
+How can it enhance my development experience?
+
+In the workshop we’ll help install and configure Docker on your laptop (Linux/OS X/Windows), to have it working in a clear and manageable way.
+Then we’ll step through setting up a Django project with Docker.
+If we have time, we’ll go on to show how Docker can help you move your project from development to deployment with minimum friction.
+"
+				>
+				    So, what's all the fuss about Docker?</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/python-in-production-engineering"
+				    tooltip="
+Python is the most used language by production engineers [0], and the second most used by Facebook infrastructure teams. We use it in domains such as infrastructure management (network/server provisioning, service turnup, auto-remediation [1] of server and services failures), platform services (package deployment, job scheduling, TFTP [2] and kernel upgrades), service configuration management [3] or operational tooling.
+Production engineers working on those services will be attending Europython 16 and happy to answer your questions on how Python helps us build service quickly and enables us to move fast and scale.
+[0] https://code.facebook.com/posts/1040181199381023/python-in-production-engineering/
+[1] https://www.facebook.com/notes/facebook-engineering/making-facebook-self-healing/10150275248698920/
+[2] https://ep2016.europython.eu/conference/talks/fbtftp-facebooks-python3-framework-for-tftp-servers
+[3] https://us.pycon.org/2016/schedule/presentation/2059/
+"
+				>
+				    Python in Production Engineering</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_04.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">async
+			    &nbsp; <small>asyncio</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/asynchronous-network-requests-in-a-web-application"
+				    tooltip="
+In the more and more popular SOA paradigm, it’s common for services to have to compose responses with resources from many different services. Everyone’s first idea will probably be to call each service synchronously with your favorite python HTTP library. This unfortunately doesn’t scale well and tens of successive network calls will make your endpoints painfully slow. 
+One solution is to parallelize these network calls. If you are already using an asynchronous web app (such as Tornado or Twisted), more asynchronous in your asynchronous shouldn’t be much of a challenge. But if you chose not to dive into the madness of chained Deferred calls, and used a standard prefork/threaded WSGI web server (such as Gunicorn or uWSGI) to run your Django/Flask/Pyramid application, you might find yourself wondering how to manage these asynchronous calls.
+This talk will explore different solutions (running Twisted event loop, Co-Routines, Asyncio, …) and how well they play with the different parallelization models of WSGI web servers.
+"
+				>
+				    Asynchronous network requests in a web application</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/uwsgi-the-full-stack-application-server"
+				    tooltip="
+Come and learn how to use the uWSGI application server stack with us.
+We’ll start from the basics to some more advanced usages :
+
+what is uWSGI and why it can help you
+what is the dynamic emperor mode and how it works
+1: run a simple Flask web application
+2: run a gevent based Flask web application
+3: run an external daemon using uWSGI
+4: create and run a task deferral application
+
+Note : we will provide and open source the Flask web application code we’ll start from and iterate from there
+"
+				>
+				    uWSGI: the full stack application server</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/the-report-of-twisteds-death"
+				    tooltip="
+
+Introduction (3 min)
+
+I’m Amber Brown, Twisted Release Manager
+3 years contributing to the Twisted Project
+
+What is asynchronous I/O? (5 min)
+How can it be implemented? (5 min)
+The options (5 min)
+
+Twisted, Tornado, asyncio
+
+Asynchronous I/O on Python 3, in 2012 (2 min)
+
+Tornado was only just ported
+twisted, gevent, eventlet, etc were not ported
+
+asyncio (7 min)
+
+Designed as both a “common API” for async I/O frameworks, much like WSGI was for web servers
+Built using ideas from Twisted
+
+asyncio exists, so Twisted and Tornado can go away, right? (5 min)
+
+asyncio is an “async I/O thing”, and twisted/tornado are “async I/O things”, so Twisted and Tornado aren’t required now, right?
+
+Twisted’s Renaissance (5 min)
+
+450,000 LoC, fifteen years of legacy, supports many many major protocols
+Twisted hits 50% on the port to Python 3
+Pressure from asyncio providing renewed competition
+The very existence of asyncio means we no longer need to have the “why is asynchronous I/O a good idea”
+
+But It’s Not Over Yet (5 min)
+
+Twisted does not implement nor use the asyncio standard APIs, Twisted needs help and developer support to do this
+Support on Windows is still subpar, as the asyncio IOCP proactor does not support UDP
+
+The Future (8 min)
+
+A Twisted You Can Use
+WSGI 2
+asyncio standardisation
+
+Questions (5 min)
+
+"
+				>
+				    The Report Of Twisted’s Death</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/asyncio-support-for-new-comers"
+				    tooltip="
+We’ll try to help everybody, especially new comers in Python, to understand better the asynchronous pattern, and AsyncIO in general.
+Don’t hesitate to ask us any question, especially if you think it’s a stupid question: No stupid questions, only stupid answers.
+Example of questions we’ll try to answer, it’s a compilation of questions we’ll already received:
+
+Where is the 101 of AsyncIO ?
+When I can use AsyncIO ?
+Why to add async/await keywords ? It’s only aliases of @asyncio.coroutine/yield from ?
+I don’t understand the difference between a task and a coroutine, could you explain me ?
+When I need to add await before a call function ?
+How to spot quickly the code can be asynchronous with synchronous code ?
+How I can use synchronous libraries in my asynchronous code ?
+How to architecture my source code with AsyncIO ?
+I don’t understand the internals of AsyncIO with event loop and how yield from works internally. (Spoiler alert: To start to code with Python itself, did you understand before the CPython’s internals ?)
+
+Why another asynchronous network framework ? Need already covered by Twisted/Tornado/Gevent/…
+
+Why some libraries need to be reimplemented, like aiohttp or aiopg ?
+Now that Django channels exist, AsyncIO is useless, isn’t it ?
+What’s the difference between AsyncIO and curio ?
+
+"
+				>
+				    AsyncIO support for new comers</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/writing-redis-in-python-with-asyncio"
+				    tooltip="
+Python has been adding more and more async features to the language.  Starting with asyncio in python 3.4 and including the new async/await keywords in python 3.5, it’s difficult to understand how all these pieces fit together.  More importantly, it’s hard to envision how to use these new language features in a real world application.  In this talk we’re going to move beyond the basic examples of TCP echo servers and example servers that can add number together.  Instead I’ll show you a realistic asyncio application.  This application is a port of redis, a popular data structure server, written in python using asyncio.  In addition to basic topics such as handling simple redis commands (GET, SET, APPEND, etc),  we’ll look at notifications using pub/sub, how to implement the MONITOR command, and persistence.  Come learn how to apply the asyncio library to real world applications. 
+"
+				>
+				    Writing Redis in Python with asyncio</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/asyncawait-in-python-35-an-why-it-is-awesome"
+				    tooltip="
+The talk will start with a brief coverage of the story of asynchronous programming in Python – Twisted, Tornado, Stackless Python &amp; greenlets, eventlet, Tornado, asyncio &amp; curio.  We’ve come a really long road, and it’s important to understand how we ended up with async/await.
+Then I’ll go over asyncio and curio, showing async/await by example, explaining that in reality it’s a very easy to use language feature.  You don’t need to know all the details to be able to successfully use the new syntax, and even build new frameworks on top of it.
+I’ll then explain the async/await machinery in CPython, starting with generators and ‘yield’ expression, showing what is ‘yield from’ and finally, demonstrating how async/await is implemented in CPython.  This will ensure that those who want to invent some new crazy ways of using async/await will have a starting point!
+I’ll end the talk with a story of how I came up with the idea.  How I shared it with Guido van Rossum, Victor Stinner, and Andrew Svetlow.  How the first version of the PEP was born, and how we managed to push it to Python 3.5 in under two months period.  The goal is to make people understand that it’s possible to change your programming language – in fact, Python, as any other programming language, wants new features and capabilities to be relevant.
+"
+				>
+				    async/await in Python 3.5 and why it is awesome</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/present-day-async-web-development-training-from-twisted-to-tornado-and-asyncio"
+				    tooltip="
+Objective
+Get hands-on experience with async Python frameworks, learn which tool works best for which task.
+Description
+This beginner-friendly workshop contains an overview, code tasks and a benchmark for production-ready Python async tools for the time being:
+
+AsyncIO
+Tornado
+Twisted
+
+Workshop does not promote any particular framework; we practically try each option and develop personal preferences.
+Plan
+
+Introduction to async web servers and frameworks (15 min)
+Formulating typical web tasks that need async design (10 min)
+for task in tasks: (1 h)
+
+implement with Twisted
+Tornado
+AsyncIO
+
+Take a realistic parallel requests use-case and use LAN to experiment (30 min)
+Discuss peculiarities of implementations (10 min)
+Run same task on different platforms with a benchmark (10 min)
+Integrate frameworks: (15 min)
+
+run Tornado on AsyncIO loop
+convert Future objects
+Q &amp; A (10 min)
+
+
+Practical part
+We try different frameworks to implement typical web tasks: handling requests, fetching data from external APIs and proxying connections. In case of reliable LAN we will use laptops of each other as services to call asynchronously. This part is interactive, everyone is a creator of own service. Then we will put some service down and do error handling, try to integrate future objects of different frameworks, run a benchmark.
+Pre-requirements
+
+Laptop with Python 3.4+
+
+"
+				>
+				    Present-day Async Web development training:  from Twisted to Tornado and AsyncIO</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/high-performance-networking-in-python"
+				    tooltip="
+The talk will start with an overview of async/await syntax introduced with PEP 492 in Python 3.5. We’ll go through asynchronous context managers and iteration protocols it introduces. I’ll briefly explain how the feature is implemented in CPython core.
+Then we’ll explore asyncio design. I’ll briefly cover event loop, policies, transports, protocols and streams abstractions. I’ll explain that event loops are pluggable, which really makes asyncio a universal framework.
+We’ll cover libuv - a high performance networking library that drives NodeJS. I’ll highlight where it’s similar to asyncio and how it’s different.
+In the final part of the talk I’ll explain how to make an asyncio compatible event loop on top of libuv. I’ll showcase Cython, which is an amazing tool for tasks like this.
+Finally, I’ll share some ideas on how we can further improve the performance of asyncio and networking in Python, and what are the challenges that we will face.
+Objectives:
+
+Deeper understanding of async/await in Python and why it’s important. 
+Deeper understanding of asyncio architecture and protocols. 
+How to improve asyncio performance by implementing custom event loops.
+Show that it’s easy to integrate existing complex &amp; low level libraries with Cython. 
+Some perspective on how Python may evolve wrt networking.
+
+"
+				>
+				    High Performance Networking in Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/introduction-to-aiohttp"
+				    tooltip="
+aiohttp is asynchronous HTTP client and server library built on top of asyncio.
+The library  allows to write user friendly code which looks like well-known
+linear one (requests library for client and Django/Flask/Pyramid for
+server) but utilizes the power of non-blocking sockets and
+supports websockets natively.
+The intro describes basic programming patterns for both client
+and server API as well as more advanced techniques. 
+Tips and tricks for writing asyncio-based code are included as well.
+The main target of the talk is displaying an alternative to
+people who want to avoid classic WSGI
+frameworks (Django/Flask/Pyramid etc) limitations but found
+Twisted and Tornado too cumbersome.
+Dive into aiohttp usage with the library author.
+"
+				>
+				    Introduction to aiohttp</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/python-and-async-programming"
+				    tooltip="
+How does the experienced python programmer fair when faced with python’s “new” way of doing async programing in for the first time?  Do we all know how and when to use Futures, yield from, asyncio, coroutines, the async and await keywords, eventloops, and others?
+A lot has changed in recent versions of Python when it comes to async programming, concurrency, and parallelism. We still have very different ways of approaching the problem in each version, but they are finally (as of python 3.4/3.5) converging to a standard. 
+This talk explores, from the perspective of an experienced python programmer with little to no experience in async programming, what the “one obvious way” to do async programming in Python is supposed to be. It does so but analysing examples of different categories of async problems we may want to solve and what the correct way to solve them with the latest versions of Python would be (along with the trade offs of different approaches).
+The examples include generic CPU-bound problems, IO-bound problems, and “both-bound” problems; along with common tasks as building a simple server, scraping, deferring a web response, and traversing graphs.
+When useful, I compare the solutions with the approach we would take in languages that have been design for- and are known to be good at async programming like Javascript and Go. 
+"
+				>
+				    Python and Async programming</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_05.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">community
+			    &nbsp; <small>psf</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/keynote-stay-for-the-community"
+				    tooltip="
+Python is a powerful and flexible tool that many of us love and use in many ways. And yet, as wonderful as  the language is, many would say that the community is even more attractive. This talk will focus on involvement in the Python community and what that means - in particular the many personal, social, and professional benefits that flow from involvement in a community like ours.
+I will also discuss what the Python Software Foundation does, what its goals and purpose are, and how everyone in the community can take part in the PSF to help build even better Python communities. This will include specific explanations of the membership model and how active contributors (both in terms of code and community organisation) can and should become full voting members of the PSF.
+I will also touch on our strengths, like our commitment to safe and inclusive spaces and our devotion to education, and also look at some of the challenges we face as a community going forward.
+"
+				>
+				    Come for the Language, Stay for the Community</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/import-community"
+				    tooltip="
+One of the biggest differences, in the Python community, in relation to other communities, is its effort to improve diversity. There is even a Diversity Statement at PSF: “We have created this diversity statement because we believe that a diverse Python community is stronger and more vibrant. A diverse community where people treat each other with respect has more potential contributors and more sources for ideas.” In last two years I was fortunate enough to take part in nine PyCon’s in ten different countries: Namibia, UK, Japan, Brazil, Italy, Argentina, Uruguay, Germany, Canada and Spain. Some were not national conferences, but were EuroPython or PyConUS. I was coach in three Django Girls at PyCon Namibia, Argentina and Brazil.  I always took note of experiences on how to improve diversity, that could be useful and replicable in my local community and would like to share at EuroPython. There are other reports that I also would like to share, which are only beautiful stories of how Python reaches the most distant people and places you may never have imagined.
+"
+				>
+				    import community</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/psf-meeting-2016"
+				    tooltip="
+EuroPython Meeting of the Python Software Foundation
+Members and non-members are invited to this EuroPython meeting of the PSF! Please join us for some updates from the PSF board.
+"
+				>
+				    PSF Meeting</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/doctors-are-in"
+				    tooltip="
+There’s a whole community, and a wealth of experience, that aim to bring the science, the art, and the fun of documentation to a higher level. Come learn some best practices on how to keep your docs maintainable, testable, deployable and up to date.
+“Give me your tired, your poor,
+Your huddled docs yearning to breathe free,
+The wretched refuse of your teeming shore.
+Send these, the homeless, tempest-tost to me,
+I lift my lamp beside the golden door!”
+"
+				>
+				    DOCtors are in!</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/pytest-30"
+				    tooltip="
+Pytest is a mature testing framework for Python that is developed by a thriving and ever-growing community of volunteers. Following the principle of “no API is the best API” it uses plain assert statements and regular Python comparisons. Writing tests with pytest requires little to no boilerplate code and powerful features allow easy parametrization and intelligent test selection.
+In this talk we will have an in-depth look at new features of pytest 3.0 and live demo possible use cases. We will also learn about important bugfixes and other enhancements of the upcoming major release. Backwards-incompatible changes will be addressed and changes made to the documentation will be highlighted.
+If you are already familiar with pytest, you will be happy to hear about significant improvements of the fixture and hook system but also what’s in store for a better integration with tox, an important tool that allows testing across different Python versions.
+In June, 2016 more than 25 Pythonistas from around the globe gather in Freiburg, Germany to work on the release and set the path for future developments of the core framework. This is a big step forward for the project made posssible by a fundraiser that reached 108% of it’s initial goal.
+I will share our experiences from the developer sprint while they are still fresh and explain why these events are incredibly important for a community and give advice on how to organize your own.
+"
+				>
+				    Pytest 3.0</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/plone-the-premier-python-cms-and-intranet"
+				    tooltip="
+Plone 5.1 brings more ways to integrate all that is needed for a modern website and intranet:
+
+rapid theming independent of the backend, so designers can do what they do best
+testable, standard ways of integrating JavaScript widgets and frameworks
+integrate best-of-breed search
+all with a solid, secure, Python backend
+flexibility and TTW rapid prototyping,  combined with CI and controlled development techniques
+
+Plone, now in its 15th year,  has evolved together with Python. As shown in one of this year’s keynotes at PyCon, the relationship is still going strong, and there is much we can learn from one another.
+"
+				>
+				    Plone, the premier Python CMS and intranet</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/publish-your-code-so-others-can-use-it-in-5-easy-steps"
+				    tooltip="
+Every Python open-source developer wants their software to be used. As developers, we trust software that is tested and well-documented.
+In this talk we’ll go through 5 steps for how to do this for your own packages.
+We will take a quick look on how to do this using popular tools and small investment of time:
+
+Write a setup.py script for a pure Python package
+Set up py.test, tox and coverage to test our package with multiple versions of Python
+Configure Github to use Travis CI &amp; coveralls.io to automatically test our package every time we commit
+Register and publish our package to PyPI
+Setup our documentation on ReadTheDocs
+
+"
+				>
+				    Publish your code so others can use it in 5 easy steps</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/code-analysis-made-super-easy"
+				    tooltip="
+The helpdesk will get the audience acquainted with code  analysis tools and how coala helps to make this whole process of static code analysis easier.  The goal of the helpdesk will be to get the user setup coala and demonstrate live on how to use it on projects etc, configure it, how to be able to customise it. coala helps to manage a lot of different tools together in one single configuration file. Also, as coala is an ever growing community of happy developers, I will assist them to get acquainted with how to contribute to coala and solve baby issues at Github to mark their first Open source contribution if they are interested in doing that. 
+"
+				>
+				    Code analysis made super easy. </a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/the-journey-from-python-developer-to-python-company-owner"
+				    tooltip="
+Ten years ago I became a big Python fan, but at the time there were no jobs for Python developers in Poland. So, I decided to start my own Python company. Today, ten years later, this company employs more than 100 Python Developers in four cities.
+There are a lot of Python enthusiasts in the world, many of them more skilled than I was at that time, but clearly not anyone can become a „Python Business Developer”. In this talk I would like to indicate main keys to success, factors and features that help a developer to find himself on an independent career path.
+My goal is to answear these questions:
+How to create employee-friendly work environment for Python developers?
+Which business model gives a chance to attract and keep more than 100 Python enthusiast?
+I will also gladly share some lessons learned while working with dozens of clients, dozens of Python frameworks, and lots, lots of great developers. 
+"
+				>
+				    The Journey from Python Developer to Python Company Owner</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/what-python-can-learn-from-haskell-packaging"
+				    tooltip="
+Haskell community has been living in “Cabal hell” for decades, but Stack tool and Nix language have been a great game changer for Haskell in 2015.
+Python packaging has evolved since they very beginning of distutils in 1999. We’ll take a look what Haskell community has been doing in their playground and what they’ve done better or worse.
+The talk is inspired by Peter Simons talk given at Nix conference: Peter Simons: Inside of the Nixpkgs Haskell Infrastructure
+Outline:
+
+Cabal (packaging) interesting features overview 
+
+Cabal file specification overview
+Interesting Cabal features not seen in Python packaging
+Lack of features (introduction into next section)
+
+Cabal hell 
+
+Quick overview of Haskell community frustration over Cabal tooling
+
+Stack tool overview 
+
+What problem Stack solves
+How Stack works
+Comparing Stack to pip requirements
+
+Using Nix language to automate packaging 
+
+how packaging is automated for Haskell
+how it could be done for Python
+
+
+"
+				>
+				    What Python can learn from Haskell packaging</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_06.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">up
+			    &nbsp; <small>ep</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/closing-session"
+				    tooltip="
+Closing Session
+"
+				>
+				    Closing Session</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/europython-2017-help-us-build-the-next-edition"
+				    tooltip="
+We need help with organizing and running EuroPython 2017
+In this session, we will explain how the EuroPython workgroup model works and where you could help.
+"
+				>
+				    EuroPython 2017: Help us build the next edition!</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/eps-general-assembly"
+				    tooltip="
+This is where the EuroPython Society (EPS) board gives its reports, resolutions are passed and the EPS members can vote in a new EPS board.
+"
+				>
+				    EPS General Assembly</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/the-lightningtalkshow"
+				    tooltip="
+At the LightningTalkShow, there is script, there are no trained actors. Just the regular attendants, delivering interesting, diverse or crazy presentation about all things Python and computer.
+To encourage the delivery, the LightningTalkMan shall conduct this ceromny, finding words when Laptops do not find the projector; allways honouring the motto of the original Python: the show must go on.
+"
+				>
+				    The LightningTalkShow</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/psf-meeting-2016"
+				    tooltip="
+EuroPython Meeting of the Python Software Foundation
+Members and non-members are invited to this EuroPython meeting of the PSF! Please join us for some updates from the PSF board.
+"
+				>
+				    PSF Meeting</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/doctors-are-in"
+				    tooltip="
+There’s a whole community, and a wealth of experience, that aim to bring the science, the art, and the fun of documentation to a higher level. Come learn some best practices on how to keep your docs maintainable, testable, deployable and up to date.
+“Give me your tired, your poor,
+Your huddled docs yearning to breathe free,
+The wretched refuse of your teeming shore.
+Send these, the homeless, tempest-tost to me,
+I lift my lamp beside the golden door!”
+"
+				>
+				    DOCtors are in!</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/build-your-microservices-with-zeromq"
+				    tooltip="
+Microservices is the popular term for the trend to build backend
+architectures as a number of smaller independent processes.  As an
+evolution from the Service Oriented Architecture the core aims are to
+create independent services which are easy to operate and even replace
+while all of them together compose into providing the business logic
+required for your application.
+While it is rather common for microservices to choose JSON over HTTP
+to communicate with each other, this is purely an implementation
+choice.  HTTP is a protocol using a strict request-response format,
+this can become a little burdensome when needing to deal with
+asynchronous requests and forces some architectural descisions to be
+not as ideal as they could be.  ZeroMQ has more flexible communication
+patterns allowing for easier mapping of real-life interactions between
+services.  Coupled with an easy to use asynchronous user-level API and
+very fast underlying communication on persistent TCP connections
+ZeroMQ is a rather attractive transport to build your microservices
+based applications in.
+This talk will show how to use ZeroMQ within Python to build your
+microservices.  It will show the benefits of ZeroMQ’s asynchronous
+API, common usage patterns and how to handle backpressure.
+Furthermore different communication patterns will be explored and the
+impact this has on how to simplify the overall architecture using
+these patterns.
+"
+				>
+				    Build your Microservices with ZeroMQ</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/effective-code-review"
+				    tooltip="
+Developers usually state that finding defects is the primary motivation for doing code reviews. However, research has shown that the main benefits of code reviews are; knowledge transfer, team awareness and finding alternative solutions.
+Code reviews when done well are more than just finding defects; it should be a discussion and conversation with other developers about finding the best solutions. We will talk about re-framing code review to encourage open discussions.
+This talk is for everyone that is already involved in regular code review and those hoping to start. I will talk through the code review process with the aim of making it a better and more useful experience for both the authors and the reviewers.
+The talk will follow the following rough outline:
+
+Introduction
+
+Why do code reviews
+What are we aiming to get out of it
+
+Submitting code for review
+
+How can you help reviewers?
+What should you avoid doing?
+Removing ownership of the code
+
+Reviewing code
+
+How should you give feedback?
+What should you look for?
+How can you encourage people to review more?
+How to avoid and remove bike-shedding
+
+Code review tools and how they impact on the process.
+Wrap up and conclusion
+
+"
+				>
+				    Effective Code Review</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/import-community"
+				    tooltip="
+One of the biggest differences, in the Python community, in relation to other communities, is its effort to improve diversity. There is even a Diversity Statement at PSF: “We have created this diversity statement because we believe that a diverse Python community is stronger and more vibrant. A diverse community where people treat each other with respect has more potential contributors and more sources for ideas.” In last two years I was fortunate enough to take part in nine PyCon’s in ten different countries: Namibia, UK, Japan, Brazil, Italy, Argentina, Uruguay, Germany, Canada and Spain. Some were not national conferences, but were EuroPython or PyConUS. I was coach in three Django Girls at PyCon Namibia, Argentina and Brazil.  I always took note of experiences on how to improve diversity, that could be useful and replicable in my local community and would like to share at EuroPython. There are other reports that I also would like to share, which are only beautiful stories of how Python reaches the most distant people and places you may never have imagined.
+"
+				>
+				    import community</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/sponsored-talk-hired"
+				>
+				    Sponsored talk: Hired</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_07.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">practice
+			    &nbsp; <small>best</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/coding-interviews-what-to-expect-and-how-to-prepare"
+				    tooltip="
+First we will talk about coding interviews: How to prepare and
+what to expect.  Then, we will cover software engineering resumes, typical coding
+questions and tasks that companies usually give to candidates.
+We end with a discussion on long-term career paths
+of software engineers. The hypothesis is that true engineering careers
+exist at maybe Google but normal firms unfortunately only allow growth by
+forcing engineers into management.
+"
+				>
+				    Programming interviews and careers</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/so-you-think-your-startup-is-worth-10-million"
+				    tooltip="
+This talk is based on the speaker’s experience running a Python focused software company for more than 15 years and a recent consulting project to support the valuation of a Python startup company in the due diligence phase.
+For the valuation we had to come up with metrics, a catalog of criteria analyzing risks, potential and benefits of the startup’s solution, as well as an estimate for how much effort it would take to reimplement the solution from scratch.
+In the talk, I am going to show the metrics we used, how they can be applied to Python code, the importance of addressing risk factors, well designed code and data(base) structures.
+By following some of the advice from this talk, you should be able to improve the valuation of your startup or consulting business in preparation for investment rounds or an acquisition.
+"
+				>
+				    So you think your Python startup is worth $10 million...</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/another-pair-of-eyes-reviewing-code-well"
+				    tooltip="
+Many of us have been taught to code, but we know that software engineering is so much more than that. Programmers can spend 5-6 hours per week on code review, but doing that is almost ignored as a skill, and instead it is often treated as a rote chore.
+How many of us have seen poor reviews - those which upset people, don’t catch bugs or block important features being merged? This talk explores the social and technical impacts of various code review practices as well as helpful tooling. The goal is to provide a structure to help improve how teams review code, and to introduce the costs and benefits of code review to anyone unfamiliar with the practice.
+There are always trade-offs to be made - e.g. think how costly a security flaw in this code could be to your organisation - perhaps intense scrutiny is not necessary for prototypes soon to be thrown away. It is useful to consider the  trade-offs in order to optimise for a particular problem domain. Perhaps right now it is more important to look for issues with maintainability, functionality or performance.
+I talk about how some fantastic code reviews from mentors, colleagues and strangers have helped me become a better programmer and team member, as well as occasions where code review has been detrimental by slowing things down and causing arguments.
+This is aimed at everyone from beginner to advanced programmers.
+"
+				>
+				    Another pair of eyes: Reviewing code well</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/clean-code-in-python"
+				    tooltip="
+Introduction to the clean code principles tailored for Python projects. The goal is to achieve better code quality and a more maintainable code base. Python has a nature of being clear, and easy to follow, so let’s take advantage of it in our own code, in order to enforce the principle “readability counts” by writing pythonic code.
+This talk introduces general concepts of code quality for Python developers, analyzing technical debt, with examples on how to achieve a more legible, maintainable and clean code base, by refactoring, writing unit tests and having good coding guidelines for the project. If you are giving your first steps with Python, you will gain insight on best practices for writing good software from the start. If you are a experienced developer, the ideas should work as food for thought, helping with recommendations for code reviews, best practices, etc.
+"
+				>
+				    Clean code in Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/python-and-mongodb"
+				    tooltip="
+The Numberly DevOps team members will help and share their experience in using mongoDB on python applications.
+Come with your code or design questions and we’ll do our best to help you find the best answers and test them live !
+The Numberly team has been running mongoDB in production for more than 5 years now and used it on various use cases, from simple web applications to real time analytics serving thousands transactions per second.
+"
+				>
+				    Python and mongoDB</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/effective-code-review"
+				    tooltip="
+Developers usually state that finding defects is the primary motivation for doing code reviews. However, research has shown that the main benefits of code reviews are; knowledge transfer, team awareness and finding alternative solutions.
+Code reviews when done well are more than just finding defects; it should be a discussion and conversation with other developers about finding the best solutions. We will talk about re-framing code review to encourage open discussions.
+This talk is for everyone that is already involved in regular code review and those hoping to start. I will talk through the code review process with the aim of making it a better and more useful experience for both the authors and the reviewers.
+The talk will follow the following rough outline:
+
+Introduction
+
+Why do code reviews
+What are we aiming to get out of it
+
+Submitting code for review
+
+How can you help reviewers?
+What should you avoid doing?
+Removing ownership of the code
+
+Reviewing code
+
+How should you give feedback?
+What should you look for?
+How can you encourage people to review more?
+How to avoid and remove bike-shedding
+
+Code review tools and how they impact on the process.
+Wrap up and conclusion
+
+"
+				>
+				    Effective Code Review</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/designing-a-pythonic-interface"
+				    tooltip="
+The json query language for elasticsearch, as well as its other APIs, can be very daunting to new users and can be a bit cumbersome when working with python. That is why we created elasticsearch-dsl - a sort of ORM for elasticsearch.
+We will go through the design philosophy and obstacles found during the development - trying to make a more pythonic interface for elasticsearch while maintaining access to all of the features of the underlying query language.
+The focus of the talk is more on the library and interface design than on elasticsearch and its query language itself, that is used only to demonstrate the principles.
+"
+				>
+				    Designing a Pythonic Interface</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/performant-python"
+				    tooltip="
+Python is a great language. Easy to learn, friendly to use, widely used.
+It is not, however, renowned for being fast.  In a lot of situations that does not matter.  Sometimes it really does.  This talk will introduce you to some tools and techniques for making sure your Python code becomes fast enough – without turning into a maintenance nightmare.  Fast code does not have to be unreadable - and when you’re writing Python, it really pays of to think “pythonically”.
+That does mean using the included batteries, and utilising the ecosystem of tools around the language, too.
+Warning: may contain small bits of other languages.
+"
+				>
+				    Performant Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/planning-for-the-worst"
+				    tooltip="
+This talk is about sharing our experience about how we handled production problems on all levels of our applications.
+We’ll begin with common problems, errors and failures and dig on to more obscure ones while sharing concrete tips, good practices and code to address them !
+This talk will make you feel the warmth of not being alone facing a problem :)
+"
+				>
+				    Planning for the worst</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/where-is-the-bottleneck"
+				    tooltip="
+Have you ever felt like your software is eating your resources and you have no clue why? Have you reviewed all the lines, debugged and printed everything but you still don’t know what’s wrong?
+In this talk I will conduct a fast intro of a basic set of tools you can use to diagnose your software’s performance and then we will go through a simple piece of code with different problems and solve them one by one, using those previously presented tools ending up with a decent and acceptable piece of code.
+This set of tools will include basic ones given by the OS itself like htop, lsof, ps and more advanced ones that let you plot the memory usage for given functions like memory_profiler, check CPU usage and the call graph between functions like cprofile and kcachegrind and others.
+Also, you will discover some bad practices and “don’t dos” with python language that can slow you down.
+By the end of the talk, you should have an idea of which are the most typical causes that can make your program slow and you will have a list of tools to search for and identify the source of the problems.
+"
+				>
+				    Where is the bottleneck?</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_08.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">iot
+			    &nbsp; <small>internet</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/micropython-on-the-bbc-microbit"
+				    tooltip="
+The BBC micro:bit is a small programmable device for children. A million of them have been handed out to the UK’s 11 and 12 years olds. The Python Software Foundation was a partner in this moon-shot scheme and, thanks to the efforts of Damien George, MicroPython (a full reimplementation of Python 3) runs on the device. All the assets needed to recreate this project have been release under open-source licenses.
+This practical demonstration shows what can be done with the device and how to program it. I’ll provide advice on how best to introduce the device to children and teachers in your own locale.
+The only prerequisite you need is a passion for Python, education and playing with a cool IoT gizmo. My goal is simply to give attendees enough information to have fun and make cool things with a micro:bit.
+"
+				>
+				    MicroPython on the BBC micro:bit</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/keynote-a-million-children-and-micropython"
+				    tooltip="
+The BBC micro:bit is a small programmable device for children. A million of them have been handed out to the UK’s 11 and 12 years olds. The Python Software Foundation was a partner in this moon-shot scheme and, thanks to the efforts of Damien George, MicroPython (a full reimplementation of Python 3) runs on the device.
+My talk will tell the story of the project, describe Python’s role in it and explain how the wider Python community can become involved. It may involve demonstrations, live coding and audience participation.
+"
+				>
+				    A Million Children (and MicroPython)</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/the-router-game"
+				    tooltip="
+This interactive game teaches the basic of ip and ethernet protocol using just paper and pens, and become very popular with our interns and LUG meetings. 
+Participants are divided in teams, simulating simple network infrastructures (eg. computers connected by an hub and a switch).
+Every player has a role:  a PC or mobile phone, an HUB, a Switch, a Router, and must communicate with the others following the associate specification (eg. an hub should broadcast message to every neighbour, a switch should populate the mac address table, …)
+The team which is faster in exchanging messages  wins.
+"
+				>
+				    The Router Game</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/using-python-on-the-bbc-microbit-in-informal-learning-environments"
+				    tooltip="
+This year, in an aspirational project led by the BBC, every 11 to 12-year-old child in the UK  is being given a small programmable device. The BBC micro:bit has LEDs, input buttons, an accelerometer, a compass, input/output pins, power supply pins, and Bluetooth connectivity. It is supported by four different programming languages, one of which is Python.
+Schools are central in delivering the project: the micro:bits are being distributed, through schools, to Year 7 pupils. However, the vision of the micro:bit project is that the devices are given directly to children. They are owned by the children themselves to do with as they wish.
+I am involved in a six-month project based in a London borough library. The project’s aim is to develop support to use Python, on the micro:bit, in the context of informal learning spaces. These include extra-curricular STEM clubs, libraries, and Saturday coding clubs.
+My poster will be a reportage of the project. It will cover the challenges of introducing Python for the micro:bit and the benefits Python brings. I will also consider some wider issues, such as the role of gender, in the roll-out of the micro:bit.
+"
+				>
+				    Using Python on the BBC micro:bit in informal learning environments</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/minibrew-brewing-beer-with-python"
+				    tooltip="
+The number one alcoholic drink in the world is undoubtedly beer. With the rise of craft beers, also homebrewing has become very popular in recent years, although it is still a complex and expensive hobby. Dutch startup MiniBrew intends to change that with their revolutionary beer brewing machine, which is controlled by a mobile app and communicates with a Python API backend. 
+In this talk Chesco will share his ideas and experiences in utilizing Python in the backend architecture for the MiniBrew project he and his team are working on at MiniBrew’s development partner Elements Interactive. 
+As many IoT projects, the ingredients for MiniBrew are a device with a limited chipset and internet connection, a backend to store the data acting as the mastermind and a mobile app to allow end users to control the brewing process. 
+The fact that we want users to know in real-time how their beer brewing process is doing presented some challenges which required us to come up with a competitive architecture that would both give real-time status updates and not saturate the server with continuous calls. 
+Chesco discusses best practices and pitfalls in designing and developing IoT architecture by diving into the RabbitMQ message broker, the MQTT protocol and protocol buffers. He will focus on the REST API and CMS site written in Python, elaborating on high frequency data in the apps, scalability, full-session logging and overcoming common architectural challenges.
+"
+				>
+				    MiniBrew: Brewing beer with Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/keeping-the-lights-on-with-python"
+				    tooltip="
+We are using Python to help the National Grid in the UK to balance electricity production and usage. We do this by installing Python powered devices at customers sites that allow us to monitor and set control criteria to automatically turn on and off power consuming and producing devices when there is a mismatch between electricity supply and demand. These devices talk to our Python powered cloud based system using the 3g network, giving us near real-time monitoring of our customers assets.
+Our entire infrastructure is written in Python, from our billing systems, data analytics systems and customer portal all the way through to our on site industrial system interfaces. In this talk we will be talking about how and why we have used Python, where we have had problems, as well as where in our system we would like to use Python and why we cannot.  We will also be talking about what we are going to do next, moving our system from near real time monitoring to near real-time control, using Python for both system modelling and control. We will discuss how we are using Python to creating a system that monitors the balance between electricity supply and demand many times per second and is able to provide a corrective control based on the sum of the output of a dynamic set of our customer sites and the challenges that presents.
+"
+				>
+				    Keeping the Lights on with Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/server-for-iot-devices-and-mobile-devices-using-wifi-network"
+				    tooltip="
+The server is developed in Python 3.4,  the information is stored in a MySQL 5.6 database. 
+All IoT devices, Mobile Devices and Windows or Linux Desktop are registered in the database.
+All type of messages that are understood by every type of device, is also registered.
+A map between which device  could access which device is also stored in the database.
+With this info, any mobile registered could send a message to a device. The message arrives to the server that resend the message to the IoT device, receive the answer and resend to the Mobile device. 
+The Mobile device and the IoT device, could be anywhere, as the server is public, have the registration of every device connected.
+The mobile device application is developed using Kivy.
+The application in the IoT device is developed in C. 
+The IoT device is a hardware device using ATSAMD21 from Atmel, and wifi is made using ESP8266. The security used is sha256, standard in Python. And the IoT device using the crypto device ATECC508A, that generate also sha256.
+The server start a thread for every device connected, the communication between thread is made using queues. 
+During the presentation, the server is going to be presented, and IoT device is shown, no demo is going to be made.
+A library to manage the database, is used for easy access to the database, and have database independence, also will be shown.
+Prerequites: Python 3.4, sha256, threading, queue, mysql.connector, relational database.
+"
+				>
+				    Server for IoT devices and Mobile devices using Wifi Network, </a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/raspberry-pi-gpio-zero"
+				    tooltip="
+I work at the Raspberry Pi Foundation and regularly give workshops on physical computing with Python to kids and teachers and we always found the existing GPIO library difficult to teach with due to its broad scope and verbose nature. Although technically possible to do all sorts of projects, it had a difficult learning curve and even the most basic of examples required explanation of code and electronics concepts.
+GPIO Zero is a new friendly API for physical computing with Raspberry Pi. Like PyGame Zero, it’s a minimal boilerplate module that lets you dive straight in and build things with physical components. Simple interfaces are provided for everyday components with obvious features provided with guessable method names. The Pythonic API was designed for use in education, and was tried and tested with teachers. This talk is the story of how the library came about, how it was developed and I provide a close look at some of its cleverest features. The initial batch of work on the library was done by two people in different cities, with all features and changes discussed in length in a series of about 100 GitHub issues over 2 months, and additional features and expansions have been implemented since launch.
+GPIO Zero is now the Foundation’s recommended method of interfacing with physical components, and comes pre-installed in the Raspbian Jessie image.
+Documentation is provided at http://gpiozero.readthedocs.org/
+"
+				>
+				    Raspberry Pi GPIO Zero</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/scaling-microservices-with-crossbario"
+				    tooltip="
+Microservices offer an efficient way to only scale parts of your applications which are hotspots. Instead of running multiple instances of a monolithic application, with all the complexity and operational run-time overhead that entails, you can scale only the functionality which is a bottleneck. Today that increasingly means scaling out, not up.
+We will go over open source technologies which allow the easy scaling out across distributed devices.
+A live demo will allow the audience to participate with its devices (including mobile phones) in an application. (There will be prizes for the donors.)
+The demo uses Crossbar.io, an open source router for the open Web Application Messaging Protocol (WAMP)  written in Python. WAMP supports routed Remote Procedure Calls, and Crossbar.io uses these to implement various load-balancing strategies across endpoints which register a particular procedure.
+WAMP has a first-class library for Python (Autobahn|Python), but is cross-language, with support for a total of 11 languages. This allows you to implement polyglot and heterogenos microservices applications, from Python to Node.js to C# right into the browser. Microservices can run anywhere, since the outgoing connections to the router which WAMP uses avoid NAT problems.
+All software used is open source, and all demo code is provided on GitHub under the MIT license.
+"
+				>
+				    Scaling Microservices with Crossbar.io</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/making-robots-walk-with-python"
+				    tooltip="
+Making a robot walk is not easy, especially when all it has for brains is a small microcontroller which you have to program in C. During this talk you will see different ways in which such a robot can be controlled in Python, either by using remote control, with the Python program running on a stationary computer, by putting a small computer, such as a Raspberry Pi on it, or by programming it with Micropython, a version of the Python language designed for microcontrollers. I will also explain the basic problems with walking robots and how Python can be used to overcome them. Finally, I will show some of the robots I have built.
+"
+				>
+				    Making robots walk with Python</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature vert-stretched">
+                <div class="thumbnail">
+                    <img src="topic_09.png" alt="">
+                    <div class="caption">
+                        <h3 class="text-center">el
+			    &nbsp; <small>en</small></h3>
+			<ul style="padding-left: 18px;">
+				<li><a href="https://ep2016.europython.eu//conference/talks/kung-fu-al-amanecer-con-itertools"
+				    tooltip="
+El módulo itertools es una de las piedras angulares de la programación avanzada en Python. Parte de la biblioteca estándar, nos ofrece un álgebra de iteradores que permite encadenar abstracciones de forma elegante, haciendo posibles soluciones sencillas a la par que más eficientes en su consumo de memoria.
+El objetivo de esta charla es el de, ante todo, proporcionar consejos y lecciones claras que puedan aplicarse de forma inmediata. Ilustrándolo con numerosos ejemplos, los asistentes abandonarán la charla habiendo asimilado como mínimo varios conceptos que mejorarán indiscutible e irremediablemente su código. El énfasis se hará en mostrar casos específicos en los que una solución tradicional puede ser mejorada una y otra vez con funciones del módulo itertools. 
+Supongamos, por ejemplo, que queremos alternar indefinidamente entre dos valores: -1 y 1. El recién iniciado utilizaría una variable cuyo valor iría modificando a cada paso y el usuario medio quizás optaría por un generador infinito. Ambas soluciones dignas y honorables, pero que palidecen ante la maestría del artista marcial que que tan sólo necesita itertools.cycle(). Porque el módulo itertools es así: una vez caído el velo de nuestros ojos y descubiertas funciones como repeat(), takewhile(), dropwhile() o product(), no hay marcha atrás. En esta charla vamos a aprender a reconocer cuándo pueden ser usadas, proporcionándonos en una única línea lo que para los meros mortales supone mucho más trabajo.
+"
+				>
+				    Kung Fu al amanecer con itertools</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/implementacion-de-un-identificador-de-sonido-en-python"
+				    tooltip="
+El tema que nos ocupa es como implementar un identificador de sonido tipo Shazam usando técnicas DSP con ayuda de unas fantásticas bibliotecas. Los puntos a seguir serán, implementación, retos y pasos adicionales. El proyecto que nos ocupa se encuentra todavía en proceso de desarrollo (el código subido en GitHub) y fue inspirado después la conferencia, Over-the-Air Audio Identification en FOSDEM 2016.
+La estructura básica del proyecto consiste en un clasificador y un reconocedor. El clasificador toma huellas del sonido y las procesa en una forma investigable para el reconocedor que usa estas huellas para la identificación y búsqueda de archivos almacenados con el fin de encontrar la semejanza mas probable. El reconocedor estará expuesto en un entorno API.
+La conferencia intentará introducir el área de DSP a la audiencia y los conceptos que están detrás aplicaciones como Shazam. Explicaré todos las nociones incluidas en una manera sencilla.
+"
+				>
+				    Implementación de un Identificador de Sonido en Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/pytest-desde-las-trincheras"
+				    tooltip="
+Las metodologías de desarrollo que incorporan la escritura de pruebas desde el momento cero tienden a generar código más estable y fiable pero la realidad es que muchas veces no gozamos del privilegio ni del presupuesto para escribir tests para todas las características de nuestro producto. Pero si tenemos a nuestra disposición herramientas de testing que nos permitan eliminar los errores evitables como romper enlaces en la página de inicio nos quitaremos el miedo a hacer pases a producción y generaremos más valor al negocio.
+La charla no tiene pretensión de ser ni una introducción al test driven development ni de las complejidades de qué es un buen o mal test. El objetivo es animar a todo aquel que todavía pruebe sus proyectos manualmente a intentar algún grado de automatización. Para ello la estructura será una presentación de pytest, exponer algunos plugins altamente recomendados y centrarse en el caso de uso de una página con presencia en ocho países donde automatizamos un montón de comprovaciones simples que nos permitieron reducir los errores evitables.
+"
+				>
+				    Pytest desde las trincheras</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/un-vector-por-tu-palabra"
+				    tooltip="
+                Sub Community: PyData
+                “Dime con quien andas y te diré cómo eres” Este dicho es una de las ideas más revolucionarias en  PLN. Podemos saber muchas cosas de una palabra por su contexto. No es lo mismo un adorable gato que un gato mecánico, pero por el contexto diferenciamos esta palabra polisémica.
+Hasta ahora la mayor parte de los modelos representan una frase como una bolsa de palabras. Por ejemplo, si queremos representar este conjunto de frases: [“I love Python”, “I love NLP”, “Pyladies are cool”] tenemos un vocabulario de siete palabras: [“I”, “love”, “Python”, “NLP”, “Pyladies”, “are”, “cool”] esta representación crea un vector de tamaño del vocabulario para cada frase, y pone a 1 si la palabra aparece y a 0 en el caso contrario : [[1,1,1,0,0,0,0], [1,1,0,1,0,0,],[0,0,0,0,1,1,1]] ¡Pero,se pierde el contexto y los vectores pueden ser gigantes y con muchísimos 0s!
+Recientemente, hemos encontrado una forma mucho mejor de representar las palabras: La representación distribuida -word2vec, por ejemplo- 
+En esta charla exploramos esta representación y cómo aplicarla en problemas de clasificación utilizando textos de redes sociales. 
+Navegaremos por el rico ecosistema científico en python, veremos cómo crear gráficas significativas y hablaremos de la importancia de escribir experimentos bien diseñados, replicables y con código elegante y por supuesto de la importancia de difundir el conocimiento. Debemos inspirar a la siguiente generación de científicos y científicas ¡Seamos extraordinarios!
+"
+				>
+				    Un vector por tu palabra</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/entendiendo-unicode"
+				    tooltip="
+La charla muestra de forma teórica/práctica qué son Unicode, las planillas de códigos, los caracteres, y las codificaciones, entra en detalle en las distintas codificaciones, para saber cómo usarlas, ejemplifica las reglas de oro para utilizar Unicode en nuestros programa, y termina mostrando algunas funciones útiles para el manejo de esa tecnología.
+"
+				>
+				    Entendiendo Unicode</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/hacking-etico-con-herramientas-python"
+				    tooltip="
+Python se ha convertido en el lenguaje más usado para desarrollar herramientas dentro del ámbito de la seguridad.
+Muchas de las herramientas que podemos encontrar hoy en día como escáner de puertos, análisis de vulnerabilidades, ataques por fuerza bruta y hacking de passwords, se han escrito en este lenguaje ,además de ofrecer un ecosistema de herramientas para realizar pruebas de seguridad y de pentesting de aplicaciones. 
+Entre los puntos a tratar podríamos destacar: 
+
+Introducir Python como lenguaje de desarrollo de herramientas de seguridad
+Introducir librerías para obtener información de nuestro objetivo como Shodan,pygeocoder,pygeoip
+Análisis y extracción de metadatos en Python en imágenes y documentos 
+Análisis de puertos con herramientas como python-nmap
+
+"
+				>
+				    Hacking ético con herramientas Python</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/buildout-django-eta-fabric-kasu-praktikoa-euskarazko-tokiko-hedabideetan"
+				    tooltip="
+Hainbat bezerorentzako neurrira egindako edukiak kudeatzeko  plataforma bat garatu dugu Django Frameworka erabiliz. Guztia kudeatzeko eta erabilitako bertsioak kontrolatzeko zc.buildout erabiltzen dugu, baina plataforma hazten doa eta iada dozena bat instalazio ditugu hainbat zerbitzaritan zehar banatuta. Plataformaren oinarria berbera denez, instalazio guztietan eguneraketak argitaratzeko  buildout eta  fabric-en oinarritutako sistema erabiltzen dugu.
+Hitzaldi honetan azalduko duguna.
+"
+				>
+				    Buildout Django eta Fabric. Kasu praktikoa euskarazko tokiko hedabideetan</a></li>
+				<li><a href="https://ep2016.europython.eu//conference/talks/game-theory-to-the-rescue-when-hard-decisions-are-to-be-made"
+				    tooltip="
+Sometimes it’s hard to decide when a something is really done or cannot be improved further. 
+Game theory can help you to make complicated decisions whenever you encounter flow problems.
+Game theory is “the study of mathematical models of conflict and cooperation between intelligent rational decision-makers.” 
+In our use case we had to match data  for accounting:  -  the data was not always clean but we had some extra tools at hand and a complex system to make good guesses. Nevertheless it was hard to decide when to give up, some records were just not processable.
+Finally we used Game theory to make the decision.
+https://en.wikipedia.org/wiki/Game_theory
+"
+				>
+				    Game Theory to the Rescue When Hard Decisions Are to  Be Made</a></li>
+			</ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6" style="text-align: right">
+		<div style="padding-top: 1.5em;">
+		    <p>
+		    <small>Brought to you by &nbsp; &nbsp;</small>
+		    </p>
+		    <a href="http://gael-varoquaux.info/">
+			<img src="gael_simple.png"/>
+		    </a>
+		</div>
+		<!-- Footer -->
+		<footer>
+		    <p>&copy;
+		    <a href="http://gael-varoquaux.info/">Gaël Varoquaux</a>
+		    2016</p>
+		    <p>License CC BY 2.0</p>
+		</footer>
+	    </div>
+
+	</div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
