@@ -1,12 +1,18 @@
+"""
+Download the abstracts from Internet, compute a topic model, plot word
+clouds, and create a webpage.
+"""
 OUTPUT_DIR = "out/ep16"
 
+
 ###############################################################################
-# Download the pages
+# Download the abstracts and URLs of the talks
 
 # Beautiful soup, for webscraping
 import bs4
 import urllib2
 
+# joblib, for caching
 import joblib
 
 mem = joblib.Memory(cachedir='cache')
@@ -92,12 +98,13 @@ def no_plural_stemmer(word):
 
 ###############################################################################
 # Learn the topic model
+n_features = 1000
+n_topics = 10
+
+# First we "vectorize": converting every document to a vector of numbers
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
 
-
-n_features = 1000
-n_topics = 10
 
 class StemmedTfidfVectorizer(TfidfVectorizer):
     def build_analyzer(self):
@@ -115,19 +122,22 @@ tfidf_vectorizer = StemmedTfidfVectorizer(max_df=0.95, min_df=2,
                                    stop_words='english')
 tfidf = tfidf_vectorizer.fit_transform(documents)
 
-# Fit the NMF model
+# Fit the topic model: a Non-negative Matrix Factorization
 nmf = NMF(n_components=n_topics, random_state=1,
           alpha=.1, l1_ratio=.5).fit(tfidf)
 
 feature_names = tfidf_vectorizer.get_feature_names()
 
+# The loading of each topic on each document
 doc_loadings = nmf.transform(tfidf)
+
 
 ###############################################################################
 # Plot word-cloud figures for each topic
 import os
-from wordcloud import WordCloud
 import itertools
+
+from wordcloud import WordCloud
 
 def my_color_func(word=None, font_size=None, position=None,
                       orientation=None, font_path=None, random_state=None):
@@ -159,7 +169,7 @@ for topic_idx, topic in enumerate(nmf.components_):
 
 
 ###############################################################################
-# Output an HTML file
+# Output an HTML file using tempita
 
 titles_and_urls = sorted(all_talks_urls.items())
 
@@ -173,13 +183,13 @@ for topic, loading in itertools.izip(nmf.components_, doc_loadings.T):
                    if f != 0]
     frequencies.sort(reverse=True)
     titles = [(l, t)
-                   for l, t in itertools.izip(loading, titles_and_urls)
-                   if l != 0]
+              for l, t in itertools.izip(loading, titles_and_urls)
+              if l != 0]
     titles.sort(reverse=True)
     talks = [tempita.bunch(title=t[0], url=t[1],
               description=(all_talks_description[t[0]]
-               if len(all_talks_description[t[0]].strip()) > 1
-               else ""))
+                           if len(all_talks_description[t[0]].strip()) > 1
+                           else ""))
              for l, t in titles]
     topic_desc = tempita.bunch(first_word=frequencies[0][1],
                                second_word=frequencies[1][1],
